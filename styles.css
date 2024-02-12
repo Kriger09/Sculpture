@@ -1,0 +1,396 @@
+
+/*@font-face {
+  font-family: 'skull-story';
+  src: url('./Skull-Story.ttf') format('truetype'); 
+}
+.menu{
+    display: flex;
+    text-align: center;
+    background-color:black;
+    padding: 1%;
+    font-size: 30px;
+    font-family: skull-story;
+    color: white;
+}
+.menu div{
+    padding-top: 2%;
+}
+body{
+    margin:0;
+    background-color:#f7f2f2;
+    
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color:white;
+}
+a:visited{
+    color:white;
+}
+.bodyimg{
+    position: relative;
+}
+.bodyimg p{
+    text-align: center;
+    color:#f7f2f2;
+    font-size: 70px;
+    font-family: skull-story;
+    position: absolute;
+    top:10%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.bodyimg h3{
+    text-align: center;
+    color:#f7f2f2;
+    font-family: skull-story;
+    font-size: 30px;
+    width: 50%;
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+    
+.grid{
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20;
+    font-family: sans-serif;
+    
+}
+.grid img{
+    border: 2px solid black;
+    border-radius: 50px;
+}
+.origami {
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 40px;
+    margin-left: 105px;
+    margin-bottom: 105px;
+    width:310px;
+    font-family: skull-story;
+    text-align: center;
+}
+.origami:hover{
+
+    transform: scale(1.1);
+}
+
+.text h3{
+    top:62%;
+    left:35%;
+    font-family: skull-story;
+    font-size: 35px;
+    position: static;
+    text-align: center;
+    align-content: center;
+}
+.headText{
+    padding-right: 35%;
+}
+.textH3{
+    font-family: skull-story;
+    font-size: 25px;
+    text-align: center;
+    align-content: center;
+}
+.textH4{
+    line-height: 35px;
+    font-size: 18px;
+}
+.text h4{
+    font-family: skull-story;
+    font-size: 25px;
+    position: static;
+    text-align: center;
+    align-content: center;
+}
+.bodyimg img{
+    height:600px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1170px){
+    .menu{
+        display: flex;
+        text-align: center;
+        background-color:black;
+        padding: 8px;
+        font-size: 10px;
+        font-family: normal;
+        font-weight: 190;
+        color: white;
+    }
+    .menu div{
+      padding-top: 20px;
+  }
+    body{
+        margin: 0;
+        background-color:#f7f2f2;
+        
+    }
+    a{
+        text-decoration: none;
+    }
+    a:link{
+        color:white;
+    }
+    a:visited{
+        color:white;
+    }
+    .bodyimg{
+        position: relative;
+    }
+    .bodyimg p{
+        text-align: center;
+        color:#f7f2f2;
+        font-size: 27.5px;
+        font-family: normal;
+        position: absolute;
+        top:10%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .bodyimg h3{
+        text-align: center;
+        color:#f7f2f2;
+        font-family: skull-story;
+        font-size: 15px;
+        width: 100%;
+        position: absolute;
+        top:40%;
+        left:45%;
+        transform: translate(-40%, -40%);
+    }
+        
+    .grid{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 19px;
+        font-family: normal;
+        
+    }
+    .grid img{
+        border: 1px solid black;
+        border-radius: 23px;
+    }
+    .origami {
+        border-radius: 9px;
+        background-color: #ffffff;
+        padding: 19px;
+        margin: 50px;
+        width:150px;
+        font-family: normal;
+        text-align: center;
+    }
+    .origami:hover{
+    
+        transform: scale(1.1);
+    }
+    
+    .text h3{
+        top:62%;
+        left:35%;
+        font-family: normal;
+        font-size: 17.5px;
+        position: static;
+        text-align: center;
+        align-content: center;
+    }
+    .headText{
+        padding-right: 30%;
+    }
+    .textH3{
+        font-family: normal;
+        font-size: 12.5px;
+        text-align: center;
+        align-content: center;
+    }
+    .textH4{
+        line-height: 11px;
+        font-size: 9px;
+    }
+    .text h4{
+        font-family: normal;
+        font-size: 12.5px;
+        position: static;
+        text-align: center;
+        align-content: center;
+    }
+    .bodyimg img{
+        height:200px;
+    }
+}
+/*@media screen and (max-width: 1000px) {
+    .menu {
+      display: block; 
+      background-color: black;
+      padding: 15px;
+      font-size: 16px; 
+      text-align: center; 
+    }
+  
+    .bodyimg p {
+      font-size: 40px; 
+    }
+  
+    .bodyimg h3 {
+      font-size: 20px; 
+    }
+  
+    .grid {
+      margin: 20px; 
+    }
+  
+    .grid img {
+      width: 100%; 
+    }
+  
+    .origami {
+      margin: 20px auto; 
+      width: 80%; 
+    }
+  
+    .text h3 {
+      top: auto;
+      left: auto;
+      font-size: 30px; 
+      text-align: center;
+    }
+  
+    .headText {
+      padding-right: 0; 
+    }
+  
+    .textH3,
+    .text h4 {
+      font-size: 20px;
+    }
+  
+    .textH4 {
+      line-height: 30px; 
+    }
+    
+    .bodyimg img {
+      height: auto;
+      width:100%; 
+    }
+  }*/
+  /* Estilos generales para todos los dispositivos 
+.menu {
+    display: flex;
+    background-color: black;
+    padding: 10px; 
+    font-size: 18px; 
+    font-family: sans-serif;
+    font-weight: 400;
+    color: white;
+    padding-left: 20px; 
+  }
+  
+  body {
+    margin: 0;
+    background-color: #f7f2f2;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:link {
+    color: white;
+  }
+  
+  a:visited {
+    color: white;
+  }
+  
+  .bodyimg {
+    position: relative;
+  }
+  
+  .bodyimg p {
+    text-align: center;
+    color: #f7f2f2;
+    font-size: 40px; 
+    font-family: skull-story;
+    position: absolute;
+    top: 5%; 
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .bodyimg h3 {
+    text-align: center;
+    color: #f7f2f2;
+    font-family: skull-story;
+    font-size: 20px; 
+    width: 100%; 
+    position: absolute;
+    top: 30%; 
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px; 
+    font-family: sans-serif;
+  }
+  
+  .grid img {
+    border: 2px solid black;
+    border-radius: 10px; 
+  }
+  
+  .origami {
+    border-radius: 10px; 
+    background-color: #ffffff;
+    padding: 20px; 
+    margin: 20px auto; 
+    width: 20%; 
+    font-family: skull-story;
+    text-align: center;
+  }
+  
+  .origami:hover {
+    transform: scale(1.1);
+  }
+  
+  .text h3 {
+    top: auto;
+    left: auto;
+    font-family: skull-story;
+    font-size: 25px; 
+    position: static;
+    text-align: center;
+  }
+  
+  .headText {
+    padding-right: 0;
+  }
+  
+  .textH3 {
+    font-family: skull-story;
+    font-size: 20px; 
+    text-align: center;
+  }
+  
+  .textH4 {
+    line-height: 30px; 
+    font-size: 16px;
+  }
+  
+  .text h4 {
+    font-family: skull-story;
+    font-size: 20px; 
+    position: static;
+    text-align: center;
+  }*/
+  

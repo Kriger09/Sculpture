@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        @font-face {
+            font-family: 'caesar';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./CAESAR.TTF') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        @font-face {
+            font-family: 'gefa';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./gelio/Gelio\ Fasolada.ttf') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        @font-face {
+            font-family: 'gegre';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./gelio/Gelio\ Greek\ Diner.ttf') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        @font-face {
+            font-family: 'geklef';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./gelio/Gelio\ Kleftiko.ttf') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        @font-face {
+            font-family: 'gepas';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./gelio/Gelio\ Pasteli.ttf') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        @font-face {
+            font-family: 'geret';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./gelio/Gelio\ Retsina.ttf') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background-color: black;
+            padding: 1%;
+            font-size: 30px;
+            font-family: gepas;
+            color: white;
+        }
+
+        .menu div {
+            padding-top: 2%;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f7f2f2;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link {
+            color: white;
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        .bodyimg {
+            position: relative;
+        }
+
+        .bodyimg p {
+            text-align: center;
+            color: #f7f2f2;
+            font-size: 77px;
+            font-family: caesar;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .bodyimg h3 {
+            text-align: center;
+            color: #f7f2f2;
+            font-family: caesar;
+            font-size: 35px;
+            width: 50%;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .grid {
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20;
+            font-family: sans-serif;
+            padding-right: 8%;
+        }
+
+        .grid img {
+            border: 2px solid black;
+            border-radius: 20px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .origami {
+            border-radius: 20px;
+            background-color: #ffffff;
+            padding: 60px;
+            margin-left: 105px;
+            margin-bottom: 105px;
+            width: 310px;
+            text-align: center;
+        }
+
+        .origami h2 {
+            font-family: mayan;
+            font-size: 50px;
+            line-height: 40px;
+        }
+
+        .origami p {
+            font-family: arial;
+            font-size: 40px;
+            line-height: 35px;
+        }
+
+        .origami:hover {
+
+            transform: scale(1.1);
+        }
+
+        .textdiv {
+            justify-content: space-around;
+            align-content: center;
+            display: flex;
+
+        }
+
+        .text {
+            width: 100%;
+            padding: 1.5%;
+        }
+
+        .texth2 {
+            text-align: center;
+            font-family: geret;
+            font-size: 60px;
+        }
+
+        .textp {
+            text-align: center;
+            font-family: caesar;
+            font-size: 35px;
+            line-height: 45px;
+        }
+
+        .headText {
+            padding-right: 35%;
+        }
+
+        .textH3 {
+            font-family: mayan;
+            font-size: 50px;
+            text-align: center;
+            align-content: center;
+        }
+
+        .textH4 {
+            line-height: 35px;
+            font-size: 33px;
+        }
+
+        .text h3 {
+            font-family: mayan;
+            font-size: 40px;
+            position: static;
+            text-align: center;
+            align-content: center;
+        }
+
+        .bodyimg img {
+            height: 600px;
+            width: 100%;
+        }
+
+        .img {
+            padding: 2%;
+        }
+
+        .img1 {
+            border: 2px solid #f7f2f2;
+            border-radius: 30px;
+            max-width: 110%;
+            height: auto;
+        }
+        .img2 {
+            border: 2px solid #f7f2f2;
+            border-radius: 30px;
+            width: 65%;
+            height: auto;
+        }
+        .img3 {
+            border: 2px solid #f7f2f2;
+            border-radius: 30px;
+            width: 85%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 1170px) {
+            .menu {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                background-color: black;
+                padding: 1%;
+                font-size: 30px;
+                font-family: mayan;
+                color: white;
+            }
+
+            .menu div {
+                padding-top: 2%;
+            }
+
+            body {
+                margin: 0;
+                background-color: #f7f2f2;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            .bodyimg {
+                position: relative;
+            }
+
+            .bodyimg img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .bodyimg p {
+                text-align: center;
+                color: #f7f2f2;
+                font-size: 85px;
+                font-family: mayan;
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .bodyimg h3 {
+                text-align: center;
+                color: #f7f2f2;
+                font-family: mayan;
+                font-size: 15px;
+                line-height: 25px;
+                width: 80%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .grid {
+                display: flex;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                gap: 60px;
+                margin: 20px;
+                font-family: sans-serif;
+                padding-right: 10%;
+            }
+
+            .grid img {
+                border: 2px solid black;
+                border-radius: 25px;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .origami {
+                border-radius: 20px;
+                background-color: #ffffff;
+                padding: 75px;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .origami h2 {
+                font-family: mayan;
+                font-size: 50px;
+                line-height: 45px;
+            }
+
+            .origami p {
+                font-family: arial;
+                font-size: 45px;
+                line-height: 40px;
+            }
+
+            .origami:hover {
+                transform: scale(1.1);
+            }
+
+            .text {
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            .text h2 {
+                font-family: gepas;
+                font-size: 50px;
+                margin-bottom: 10px;
+            }
+
+            .text p {
+                font-family: mayan;
+                font-size: 45px;
+                line-height: 40px;
+            }
+
+            .bodyimg img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+    <title>Sculpture</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu">
+            <img class="headText" src="./Icon.png" width="5%" height="5%">
+            <div class="headText">
+                Sculpture
+            </div>
+            <div>
+                <a href="https://www.facebook.com/colegioggm/?locale=es_LA">
+                    About us
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="bodyimg">
+        <img src="bg.png">
+        <p>
+            Sculpture: A Journey Through Time
+        </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>
+            Didactic Unit:
+            <br>
+            <br>
+            By:
+        </h3>
+    </div>
+    <div class="textdiv">
+        <div class="img"><img src="./Img/img1.jpeg" class="img1"></div>
+        <div class="text">
+            <h2 class="texth2">What is sculpture?</h2>
+            <p class="textp">
+                Sculpture is the art of carving, modeling, welding, or otherwise producing figurative or abstract
+                works of art in three dimensions, as in relief, intaglio, or in the round.
+            </p>
+        </div>
+    </div>
+    <div><img src="./Img/linea1.png"></div>
+    <div class="textdiv">
+        <div class="img"><img src="./Img/img2.jpeg" class="img2"></div>
+        <div class="text">
+            <h2 class="texth2">What is sculpture?</h2>
+            <p class="textp">
+                Sculpture is the art of carving, modeling, welding, or otherwise producing figurative or abstract
+                works of art in three dimensions, as in relief, intaglio, or in the round.
+            </p>
+        </div>
+        <div class="img" style="padding-left:10%;"><img src="./Img/img3.jpeg" class="img3"></div>
+    </div>
+    <div><img src="./Img/linea2.png"></div>
+</body>
+<footer>
+    <div class="header">
+        <div class="menu">
+            <img class="headText" src="./Icon.png" width="5%" height="5%">
+            <div class="headText">
+                Sculpture
+            </div>
+            <div>
+                <a href="https://www.nationalgeographicla.com/historia/2022/09/quienes-fueron-los-mayas">
+                    More Information
+                </a>
+            </div>
+        </div>
+</footer>
+</div>
+
+</html>
