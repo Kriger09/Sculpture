@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        @font-face {
+            font-family: 'caesar';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./CAESAR.TTF') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        @font-face {
+            font-family: 'gefa';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./gelio/Gelio\ Fasolada.ttf') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        @font-face {
+            font-family: 'gegre';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./gelio/Gelio\ Greek\ Diner.ttf') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        @font-face {
+            font-family: 'geklef';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./gelio/Gelio\ Kleftiko.ttf') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        @font-face {
+            font-family: 'gepas';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./gelio/Gelio\ Pasteli.ttf') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        @font-face {
+            font-family: 'geret';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./gelio/Gelio\ Retsina.ttf') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background-color: black;
+            padding: 1%;
+            font-size: 30px;
+            font-family: gepas;
+            color: white;
+        }
+
+        .menu div {
+            padding-top: 2%;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f7f2f2;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link {
+            color: white;
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        .bodyimg {
+            position: relative;
+        }
+
+        .bodyimg p {
+            text-align: center;
+            color: #f7f2f2;
+            font-size: 77px;
+            font-family: caesar;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .bodyimg h3 {
+            text-align: center;
+            color: #f7f2f2;
+            font-family: caesar;
+            font-size: 35px;
+            width: 50%;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .textdiv {
+            justify-content: space-around;
+            align-content: center;
+            display: flex;
+        }
+
+        .text {
+            width: 140%;
+        }
+
+        .texth2 {
+            text-align: center;
+            font-family: geret;
+            font-size: 60px;
+        }
+
+        .textp {
+            text-align: center;
+            font-family: caesar;
+            font-size: 35px;
+            line-height: 45px;
+            padding: 2%;
+        }
+
+        .textTh2 {
+            font-family: caesar;
+            font-weight: bold;
+            font-size: 43px;
+            line-height: 45px;
+        }
+
+        .textTp {
+            font-family: caesar;
+            font-size: 28px;
+            line-height: 35px;
+        }
+
+        .textTh3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+        }
+
+        .headText {
+            padding-right: 35%;
+        }
+
+        .textH3 {
+            font-family: mayan;
+            font-size: 50px;
+            text-align: center;
+            align-content: center;
+        }
+
+        .textH4 {
+            line-height: 35px;
+            font-size: 33px;
+        }
+
+        .text h3 {
+            font-family: mayan;
+            font-size: 40px;
+            position: static;
+            text-align: center;
+            align-content: center;
+        }
+
+        .bodyimg img {
+            height: 600px;
+            width: 100%;
+        }
+
+        .img {
+            padding: 0.8%;
+        }
+
+        .img1 {
+            border: 2px solid #f7f2f2;
+            border-radius: 30px;
+            width: 100%;
+            height: auto;
+        }
+
+        .img2 {
+            margin-left: 10%;
+            border: 2px solid #f7f2f2;
+            border-radius: 30px;
+            width: 20%;
+            height: auto;
+        }
+
+        .img3 {
+            border: 2px solid #f7f2f2;
+            border-radius: 30px;
+            width: 75%;
+            height: auto;
+        }
+
+        .img4 {
+            margin-left: 45%;
+            border: 2px solid #f7f2f2;
+            border-radius: 30px;
+            width: 16.3%;
+            height: auto;
+        }
+
+        .img5 {
+            border: 2px solid #f7f2f2;
+            border-radius: 30px;
+            width: 90%;
+            height: auto;
+        }
+
+        .img6 {
+            border: 2px solid #f7f2f2;
+            border-radius: 30px;
+            width: 105%;
+            height: auto;
+        }
+
+        .img7 {
+            border: 2px solid #f7f2f2;
+            border-radius: 30px;
+            width: 40%;
+            height: auto;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #ddd;
+            top: 0;
+            bottom: 0;
+            left: 53.5%;
+            margin-left: -3px;
+        }
+
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 70%;
+        }
+
+        .left {
+            right: 20%;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 30px;
+        }
+
+        .content img {
+            border: 2px solid #f7f2f2;
+            border-radius: 30px;
+            height: auto;
+        }
+
+        .imgT1 {
+            margin-left: 7.5%;
+            width: 40%;
+        }
+
+        .imgT2 {
+            margin-left: 7.5%;
+            width: 45%;
+        }
+
+        .imgT3 {
+            margin-left: 7.5%;
+            width: 50%;
+        }
+
+        /* Optional: Add arrows to the left or right container */
+        .left .content::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .right .content::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        @media screen and (max-width: 1170px) {
+            .menu {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                background-color: black;
+                padding: 1%;
+                font-size: 25px;
+                font-family: gepas;
+                color: white;
+            }
+
+            .menu div {
+                padding-top: 2%;
+                /* Ajuste del padding para un mejor espaciado vertical */
+            }
+
+            body {
+                margin: 0;
+                background-color: #f7f2f2;
+            }
+
+            a,
+            a:link,
+            a:visited {
+                text-decoration: none;
+                color: white;
+            }
+
+            .bodyimg img {
+                width: 100%;
+                /* Asegurar que las imágenes sean responsivas y ocupen el ancho disponible */
+                height: auto;
+                /* Mantener la proporción de las imágenes ajustando su altura automáticamente */
+            }
+
+            .bodyimg p {
+                font-size: 45px;
+                line-height: 35px;
+                /* Reducir el tamaño de la fuente para adaptarse a pantallas más pequeñas */
+                font-family: caesar;
+                /* Asegurar la coherencia en el uso de fuentes */
+            }
+
+            .bodyimg h3 {
+                top: 42.5%;
+                font-size: 40px;
+                /* Ajuste del tamaño de la fuente para mejorar la legibilidad */
+                line-height: 35px;
+                /* Ajuste del espaciado entre líneas para mejorar la legibilidad */
+                width: 90%;
+                /* Ajuste del ancho para evitar el desbordamiento de texto */
+            }
+
+            /* Ajustes para contenedores y elementos de texto para mejorar la disposición y visualización */
+            .text,
+            .textdiv {
+                display: block;
+                /* Cambio a bloque para una mejor disposición en dispositivos móviles */
+                width: 100%;
+                /* Aprovechar todo el ancho disponible */
+                text-align: center;
+                /* Centrar el texto para una mejor legibilidad */
+            }
+
+            .text h2,
+            .texth2,
+            .textH3,
+            .text h3 {
+                font-size: 45px;
+                /* Ajuste de tamaño de fuente para todos los elementos de texto relevantes */
+                line-height: 35px;
+                /* Ajuste de espaciado entre líneas */
+            }
+            .textp {
+                font-size: 40px;
+                line-height: 35px;
+            }
+
+            .textTh2,
+            .textTp,
+            .textTh3 {
+                font-size: 40px;
+                /* Ajuste de tamaño de fuente para todos los elementos de texto relevantes */
+                line-height: 40px;
+                /* Ajuste de espaciado entre líneas */
+            }
+
+            /* Adaptaciones para imágenes dentro de .content y clases específicas */
+            .img1,
+            .img2,
+            .img3,
+            .img4,
+            .img5,
+            .img6,
+            .img7 {
+                align-content: center;
+                width: 50%;
+                /* Ajuste del ancho de las imágenes para mejor visualización */
+                margin: 10px auto;
+                /* Centrar imágenes y proporcionar un margen */
+            }
+
+            /* Estilos adicionales para origami y .grid para manejar la disposición de contenido */
+            .grid,
+            .origami {
+                display: flex;
+                flex-direction: column;
+                /* Cambio a disposición vertical */
+                justify-content: center;
+                align-items: center;
+            }
+
+            .origami h2,
+            .origami p,
+            .text h2,
+            .text p {
+                font-size: 30px;
+                /* Ajuste del tamaño de fuente para textos dentro de origami y .text */
+            }
+
+            .origami:hover {
+                transform: scale(1.05);
+                /* Efecto sutil al pasar el mouse */
+            }
+
+            .timeline {
+                position: relative;
+                max-width: 300px;
+                /* Ajuste para usar todo el ancho disponible */
+                margin: 0 auto;
+                /* Añadir algo de padding para no pegar el contenido a los bordes */
+            }
+
+            .timeline::after {
+                content: '';
+                position: absolute;
+                width: 1%;
+                /* Cambio para que la línea ocupe todo el ancho */
+                /* Ajuste para que la línea sea horizontal */
+                background-color: #ddd;
+                top: 0;
+                bottom: 0;
+                /* Posicionamiento al centro verticalmente */
+                left: 53.5%;
+                margin-left: -1.5%;
+                /* Centrado vertical */
+            }
+
+            .container {
+                padding: 0.5%;
+                position: relative;
+            background-color: inherit;
+                /* Aumento del padding para mejor visualización */
+                width: 150%;
+                /* Ajuste para que el contenedor use todo el ancho disponible */
+                box-sizing: border-box;
+                /* Asegurar que el padding no afecte el ancho total */
+            }
+
+            .left{
+                left: -100%;
+            }
+            .right {
+                left: 50%;
+                /* Alinear todos los contenedores al inicio */
+            }
+
+            .content {
+                padding: 1%;
+                /* Ajuste del padding para mayor espacio interior */
+                margin-bottom: 2%;
+                /* Añadir margen inferior para separar los contenidos */
+            }
+
+            .content img {
+                width: 50%;
+                /* Hacer que las imágenes sean responsivas y ocupen el ancho disponible */
+                margin: 10px 0;
+                /* Añadir un margen superior e inferior */
+            }
+
+            .imgT1,
+            .imgT2,
+            .imgT3 {
+                margin-left: 2.5%;
+                /* Ajuste para que las imágenes no tengan margen izquierdo */
+                width: 120%;
+                /* Ajustar el ancho al 100% para que ocupen todo el espacio disponible */
+            }
+
+            /* Eliminar los pseudo-elementos para las flechas porque el diseño será lineal y no necesitaremos indicar dirección */
+            .left .content::before {
+                content: " ";
+                height: 0;
+                position: absolute;
+                top: 2%;
+                width: 0;
+                z-index: 1%;
+                right: 3%;
+                border: medium solid white;
+                border-width: 1px 1px 1px;
+                border-color: transparent transparent transparent white;
+            }
+
+            .right .content::before {
+                content: " ";
+                height: 0;
+                position: absolute;
+                top: 2%;
+                width: 0;
+                z-index: 1%;
+                left: 3%;
+                border: medium solid white;
+                border-width: 1px 1px 1px ;
+                border-color: transparent white transparent transparent;
+            }
+        }
+    </style>
+    <title>Sculpture</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu">
+            <img class="headText" src="./Icon.png" width="8%" height="8%">
+            <div class="headText">
+                Sculpture
+            </div>
+            <div>
+                <a href="https://www.facebook.com/colegioggm/?locale=es_LA">
+                    About us
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="bodyimg">
+        <img src="bg.png">
+        <p>
+            Sculpture: A Journey Through Time
+        </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>
+            By: Diego André Muñoz, María Fernanda Sánchez
+        </h3>
+    </div>
+    <div class="textdiv">
+        <div class="text">
+            <h2 class="texth2">What is sculpture?</h2>
+            <div class="textdiv">
+                <div class="img">
+                    <div class="img"><img src="./Img/img1.jpeg" class="img1"></div>
+                </div>
+                <p class="textp" style="width: 90%;">
+
+                    Sculpture is the art of carving, modeling, welding, or otherwise producing figurative or abstract
+                    works of art in three dimensions, as in relief, intaglio, or in the round.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div><img style="width:100%; height:auto;" src="./Img/linea1.png"></div>
+    <div class="textdiv">
+        <div class="text">
+            <h2 class="texth2">Prehistoric Origins</h2>
+            <p class="textp">
+
+                Sculpture, one of the oldest forms of artistic expression, has been revered as one of the Fine Arts
+                since ancient times. Its roots go back to prehistory, with the first artistic manifestations found in
+                figures carved in stone, wood, and bone. An emblematic example is the Venus of Willendorf, dating from
+                24,000 to 22,000 BC, often symbolizing ritual or symbolic aspects linked to fertility, religion, and
+                magic.
+
+            </p>
+        </div>
+        <div class="img"><img src="./Img/img3.jpeg" class="img3"></div>
+    </div>
+    <div><img style="width:100%; height:auto;" src="./Img/linea2.png"></div>
+    <div class="textdiv">
+        <div class="text">
+            <h2 class="texth2">Evolution in Ancient Civilizations</h2>
+            <p class="textp">
+
+                As time progressed, sculpture underwent remarkable evolution, encompassing more complex and
+                sophisticated representations. Ancient civilizations such as Egypt, Mesopotamia, Greece, and Rome took
+                sculpture to new heights of realism, aesthetic beauty, scale, and ambition. From small figures to
+                colossal statues and architectural reliefs, these cultures used sculpture for decorative, narrative,
+                religious, and commemorative purposes.
+
+            </p>
+            <div class="img">
+                <img src="./Img/img2.jpeg" class="img2">
+                <img class="img4" src="./Img/img4.jpeg">
+            </div>
+        </div>
+    </div>
+    <div><img style="width:100%; height:auto;" src="./Img/linea3.png"></div>
+    <div class="textdiv">
+        <div class="text">
+            <h2 class="texth2">Sculpture as a Fine Art</h2>
+            <div class="textdiv">
+                <p class="textp" style="width: 90%;">
+
+                    Sculpture is distinguished by its unique ability to transform raw materials into expressions of
+                    beauty,
+                    human emotion, and philosophical concepts. Occupying a three-dimensional space, it allows for a
+                    unique
+                    physical and visual interaction that can be experienced from multiple angles, giving it an
+                    expressive
+                    power and a presence that can deeply move the viewer.
+
+                </p>
+                <div class="img">
+                    <img src="./Img/img5.jpeg" class="img5">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div><img style="width:100%; height:auto;" src="./Img/linea4.png"></div>
+    <div class="textdiv">
+        <div class="text">
+            <h2 class="texth2">Innovation and Diversity of Materials</h2>
+            <div class="textdiv">
+                <div class="img">
+                    <img src="./Img/img6.png" class="img6">
+                </div>
+                <p class="textp" style="width: 90%;">
+
+                    Over the centuries, sculpture has continued to innovate, adopting a wide variety of styles, from
+                    classical realism to modern abstract. Sculptors have experimented with materials such as metal,
+                    plastic, and glass, reflecting and challenging the perceptions of their time. This continuous
+                    evolution demonstrates the ability of sculpture to capture the complexity of human experience
+                    through form, space, and texture.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div><img style="width:100%; height:auto;" src="./Img/linea5.png"></div>
+    <div class="textdiv">
+        <div class="text">
+            <h2 class="texth2">Time Line</h2>
+        </div>
+    </div>
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2 class="textTh2">
+                    Prehistoric Era (c. 28,000–25,000 BCE)
+                    <dd>
+                        The Venus of Willendorf
+                    </dd>
+                </h2>
+
+                <dd>
+                    <p class="textTp">
+                        <b class="textTh3">Author:</b>
+                        Unknown.
+                    </p>
+                    <p class="textTp">
+                        <b class="textTh3">Meaning:</b>
+                        Symbol of fertility and abundance in prehistoric cultures.
+                    </p>
+                    <p class="textTp">
+                        <b class="textTh3">Additional Info:</b>
+                        Discovered in Austria in 1908, it's one of the oldest known works of art, representing exaggerated female features.
+                    </p>
+                </dd>
+                <img src="./Img/img3.jpeg" class="imgT1">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2 class="textTh2">
+                    Hellenistic Period (c. 190 BCE)
+                    <dd>
+                        Nike of Samothrace
+                    </dd>
+                </h2>
+
+                <dd>
+                    <p class="textTp">
+                        <b class="textTh3">Author:</b>
+                        Unknown (Greek sculptor)
+                    </p>
+                    <p class="textTp">
+                        <b class="textTh3">Meaning:</b>
+                        Symbol of victory, triumph, and divine intervention.
+                    </p>
+                    <p class="textTp">
+                        <b class="textTh3">Additional Info:</b>
+                        Found on the island of Samothrace in Greece, it commemorates a naval victory with its dynamic composition.
+                    </p>
+                </dd>
+                <img src="./Img/imgt2.jpeg" class="imgT2">
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2 class="textTh2">
+                    Hellenistic Period (c. 130–100 BCE)
+                    <dd>
+                        The Venus of Milo 
+                    </dd>
+                </h2>
+
+                <dd>
+                    <p class="textTp">
+                        <b class="textTh3">Author:</b>
+                        Unknown (Greek sculptor)
+                    </p>
+                    <p class="textTp">
+                        <b class="textTh3">Meaning:</b>
+                        Symbol of idealized feminine beauty and grace, representing the Greek goddess of love and beauty, Aphrodite.
+                    </p>
+                    <p class="textTp">
+                        <b class="textTh3">Additional Info:</b>
+                        Named also as Aphrodite of Milos, this ancient Greek statue was found in 1820 on the island of Milos. Despite missing arms, its serene expression and elegant drapery captivate viewers worldwide.
+                    </p>
+                </dd>
+                <img src="./Img/imgt9.jpeg" class="imgT2">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2 class="textTh2">
+                    Renaissance (c. 1501–1504 CE)
+                    <dd>
+                        David
+                    </dd>
+                </h2>
+
+                <dd>
+                    <p class="textTp">
+                        <b class="textTh3">Author:</b>
+                        Michelangelo Buonarroti
+                    </p>
+                    <p class="textTp">
+                        <b class="textTh3">Meaning:</b>
+                        Symbol of courage, determination, and the triumph of good over evil.
+                    </p>
+                    <p class="textTp">
+                        <b class="textTh3">Additional Info:</b>
+                        A masterpiece of Renaissance sculpture, depicting the biblical hero facing Goliath.
+                    </p>
+                </dd>
+                <img src="./Img/imgt3.jpeg" class="imgT1">
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2 class="textTh2">
+                    19th Century (c. 1888–1889)
+                    <dd>
+                        The Kiss
+                    </dd>
+                </h2>
+
+                <dd>
+                    <p class="textTp">
+                        <b class="textTh3">Author:</b>
+                        Auguste Rodin
+                    </p>
+                    <p class="textTp">
+                        <b class="textTh3">Meaning:</b>
+                        Symbol of love, desire, and intimacy.
+                    </p>
+                    <p class="textTp">
+                        <b class="textTh3">Additional Info:</b>
+                        Inspired by Dante's Inferno, it celebrates the beauty of human relationships.
+                    </p>
+                </dd>
+                <img src="./Img/imgt5.jpeg" class="imgT1">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2 class="textTh2">
+                    19th Century (dedicated in 1886)
+                    <dd>
+                        The Statue of Liberty
+                    </dd>
+                </h2>
+
+                <dd>
+                    <p class="textTp">
+                        <b class="textTh3">Author:</b>
+                        Frédéric Auguste Bartholdi (with structural engineering by Gustave Eiffel)
+                    </p>
+                    <p class="textTp">
+                        <b class="textTh3">Meaning:</b>
+                        Symbol of freedom, democracy, and hope.
+                    </p>
+                    <p class="textTp">
+                        <b class="textTh3">Additional Info:</b>
+                        A gift from France to the United States, it represents liberty and enlightenment for immigrants.
+                    </p>
+                </dd>
+                <img src="./Img/imgt8.jpeg" class="imgT2">
+            </div>
+        </div>
+    </div>
+    <div><img style="width:100%; height:auto;" src="./Img/linea6.png"></div>
+    <div class="textdiv">
+        <div class="text">
+            <h2 class="texth2">The Ongoing Relevance of Sculpture</h2>
+            <div class="textdiv">
+                <p class="textp" style="width: 90%;">
+                    The importance of sculpture lies in its rich history and its contribution to the cultural heritage
+                    of humanity. It continues to inspire, challenge, and provoke the viewer, asserting itself as an art
+                    form that captures the essence of the human experience.
+                </p>
+
+            </div>
+            <center>
+                <div class="img">
+                    <img src="./Img/img7.jpeg" class="img7">
+                </div>
+            </center>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="header">
+        <div class="menu">
+            <img class="headText" src="./Icon.png" width="5%" height="5%">
+            <div class="headText">
+                Sculpture
+            </div>
+            <div>
+                <a href="https://www.britannica.com/art/sculpture">
+                    More Information
+                </a>
+            </div>
+        </div>
+</footer>
+</div>
+
+</html>
